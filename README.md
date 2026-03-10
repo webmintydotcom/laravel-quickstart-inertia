@@ -180,3 +180,6 @@ if ($this->app->isProduction()) {
 
 Vite::usePrefetchStrategy('aggressive');
 ```
+
+Thank you
+[Webminty](https://webminty.com) Team

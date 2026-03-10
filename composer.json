@@ -1,13 +1,18 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "webmintydotcom/laravel-quickstart",
-    "version": "3.0.0",
+    "name": "webmintydotcom/laravel-quickstart-inertia",
+    "version": "1.0.0",
     "type": "project",
     "description": "Laravel starter kit with common addons.",
     "keywords": [
         "laravel",
         "framework",
-        "starter kit"
+        "starter kit",
+        "inertia",
+        "react",
+        "typescript",
+        "tailwindcss",
+        "vite"
     ],
     "license": "MIT",
     "require": {
