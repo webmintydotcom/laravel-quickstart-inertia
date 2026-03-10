@@ -1,7 +1,7 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
     "name": "webmintydotcom/laravel-quickstart-inertia",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "type": "project",
     "description": "Laravel starter kit with common addons.",
     "keywords": [
