@@ -1,20 +1,37 @@
-# Laravel + Webminty Defaults Starter Kit
+# Laravel + React + Inertia.js Starter Kit
 
 ## Introduction
 
-This is a starter kit for Laravel applications that includes Tailwind CSS, and other useful packages and configurations.
-It is designed to help you quickly set up a new Laravel project with a modern development environment.
+A starter kit for Laravel applications with React, Inertia.js, Shadcn UI, and Tailwind CSS v4. Designed to help you quickly set up a new full-stack Laravel project with a modern development environment.
 
 ## Installation
 
 ```bash
-laravel new my-app --pest --npm --using=webmintydotcom/laravel-quickstart
+laravel new my-app --pest --npm --using=webmintydotcom/laravel-quickstart-inertia
 ```
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Backend | Laravel 12, PHP 8.4 |
+| Frontend | React 19, TypeScript |
+| Routing | Inertia.js |
+| UI Components | Shadcn UI |
+| Styling | Tailwind CSS v4 |
+| Build | Vite 7 |
+| Testing | Pest, Larastan |
 
 ## Included Packages
 
 - [Laravel](#laravel)
+  - [Inertia.js](#inertiajs)
+  - [Ziggy](#ziggy)
   - [Spatie Laravel Data](#spatie-laravel-data)
+- [Frontend](#frontend)
+  - [React](#react)
+  - [Shadcn UI](#shadcn-ui)
+  - [Tailwind CSS](#tailwind-css)
 - [Debugging](#debugging)
   - [Spatie Laravel Ray](#spatie-laravel-ray)
 - [Testing](#testing)
@@ -26,8 +43,7 @@ laravel new my-app --pest --npm --using=webmintydotcom/laravel-quickstart
   - [Larastan](#larastan)
   - [Pint](#pint)
   - [Rector](#rector)
-- [NPM](#npm)
-  - [Tailwind CSS](#tailwind-css)
+- [Formatting](#formatting)
   - [Prettier](#prettier)
     - [Prettier Plugin - Tailwind CSS](#prettier-plugin---tailwind-css)
     - [Prettier Plugin - Blade](#prettier-plugin---blade)
@@ -36,11 +52,43 @@ laravel new my-app --pest --npm --using=webmintydotcom/laravel-quickstart
 
 Version **12** of Laravel is used in this starter kit.
 
+#### Inertia.js
+
+Inertia.js connects the Laravel backend to the React frontend without needing an API. Pages are React components rendered via `Inertia::render()` in your routes and controllers.
+
+[Homepage](https://inertiajs.com/) | [Docs](https://inertiajs.com/how-it-works)
+
+#### Ziggy
+
+Ziggy provides a `route()` helper in JavaScript, so you can use Laravel named routes in your React components.
+
+[Docs](https://github.com/tighten/ziggy)
+
 #### Spatie Laravel Data
 
 Spatie Laravel Data is included to help you create data transfer objects (DTOs) in a simple and elegant way.
 
 [Docs](https://spatie.be/docs/laravel-data/v4/introduction)
+
+### Frontend
+
+#### React
+
+React 19 with TypeScript. Entry point is `resources/js/app.tsx` with SSR support via `resources/js/ssr.tsx`.
+
+[Docs](https://react.dev/)
+
+#### Shadcn UI
+
+Pre-configured with `components.json` pointing to `resources/js/components/ui/`. Includes all required dependencies (Radix UI, class-variance-authority, clsx, tailwind-merge, Lucide icons).
+
+[Homepage](https://ui.shadcn.com/) | [Docs](https://ui.shadcn.com/docs)
+
+#### Tailwind CSS
+
+Tailwind CSS v4 with the Vite plugin. Configured with Shadcn's full oklch color palette and dark mode support.
+
+[Homepage](https://tailwindcss.com/) | [Docs](https://tailwindcss.com/docs/installation)
 
 ### Debugging
 
@@ -48,9 +96,7 @@ Spatie Laravel Data is included to help you create data transfer objects (DTOs) 
 
 Spatie Laravel Ray is included to help you debug your Laravel applications with ease.
 
-[Homepage](https://myray.app/)
-
-[Docs](https://myray.app/docs/getting-started/introduction)
+[Homepage](https://myray.app/) | [Docs](https://myray.app/docs/getting-started/introduction)
 
 ### Testing
 
@@ -58,13 +104,9 @@ Spatie Laravel Ray is included to help you debug your Laravel applications with 
 
 Pest is included to help you write expressive and elegant tests for your Laravel applications.
 
-[Homepage](https://pestphp.com/)
-
-[Docs](https://pestphp.com/docs/installation)
+[Homepage](https://pestphp.com/) | [Docs](https://pestphp.com/docs/installation)
 
 ##### Spatie Pest Expectations
-
-Spatie Pest Expectations is included to help you write expressive and readable tests using Pest.
 
 [Docs](https://github.com/spatie/pest-expectations)
 
@@ -98,33 +140,19 @@ Rector is included to help you refactor and upgrade your Laravel codebase automa
 
 [Docs](https://github.com/driftingly/rector-laravel)
 
-### NPM
-
-#### Tailwind CSS
-
-Tailwind CSS is included to help you build modern and responsive user interfaces with ease.
-
-[Homepage](https://tailwindcss.com/)
-
-[Docs](https://tailwindcss.com/docs/installation)
+### Formatting
 
 #### Prettier
 
 Prettier is included to help you format your code consistently across your project.
 
-[Homepage](https://prettier.io/)
-
-[Docs](https://prettier.io/docs/en/index.html)
+[Homepage](https://prettier.io/) | [Docs](https://prettier.io/docs/en/index.html)
 
 ##### Prettier Plugin - Tailwind CSS
-
-Prettier Plugin for Tailwind CSS is included to help you format your Tailwind CSS classes automatically.
 
 [Docs](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
 
 ##### Prettier Plugin - Blade
-
-Prettier Plugin for Blade is included to help you format your Blade templates automatically.
 
 [Docs](https://github.com/stillat/blade-parser-typescript)
 
