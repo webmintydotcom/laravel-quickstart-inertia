@@ -7,7 +7,8 @@
         <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
         @inertiaHead
-        @vite(['resources/css/app.css', 'resources/js/app.tsx'])
+        @viteReactRefresh
+        @vite(['resources/js/app.tsx'])
     </head>
     <body class="font-sans antialiased">
         @inertia
