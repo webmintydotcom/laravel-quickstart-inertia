@@ -14,13 +14,13 @@ laravel new my-app --pest --npm --using=webmintydotcom/laravel-quickstart-inerti
 
 | Layer | Technology |
 |-------|-----------|
-| Backend | Laravel 12, PHP 8.4 |
-| Frontend | React 19, TypeScript |
+| Backend | Laravel 13, PHP 8.4 |
+| Frontend | React 19, TypeScript 7 |
 | Routing | Inertia.js |
 | UI Components | Shadcn UI |
 | Styling | Tailwind CSS v4 |
-| Build | Vite 7 |
-| Testing | Pest, Larastan |
+| Build | Vite 8 |
+| Testing | Pest 5, Larastan |
 
 ## Included Packages
 
@@ -50,7 +50,7 @@ laravel new my-app --pest --npm --using=webmintydotcom/laravel-quickstart-inerti
 
 ### Laravel
 
-Version **12** of Laravel is used in this starter kit.
+Version **13** of Laravel is used in this starter kit.
 
 #### Inertia.js
 
@@ -74,7 +74,7 @@ Spatie Laravel Data is included to help you create data transfer objects (DTOs) 
 
 #### React
 
-React 19 with TypeScript. Entry point is `resources/js/app.tsx` with SSR support via `resources/js/ssr.tsx`.
+React 19 with TypeScript 7. Entry point is `resources/js/app.tsx` with SSR support via `resources/js/ssr.tsx`.
 
 [Docs](https://react.dev/)
 
@@ -102,7 +102,7 @@ Spatie Laravel Ray is included to help you debug your Laravel applications with 
 
 #### Pest
 
-Pest is included to help you write expressive and elegant tests for your Laravel applications.
+Pest 5 is included to help you write expressive and elegant tests for your Laravel applications.
 
 [Homepage](https://pestphp.com/) | [Docs](https://pestphp.com/docs/installation)
 
@@ -132,7 +132,7 @@ Larastan is included to help you catch type errors in your Laravel applications 
 
 Pint is included to help you format your Laravel code according to the Webminty coding standard.
 
-[Docs](https://laravel.com/docs/12.x/pint)
+[Docs](https://laravel.com/docs/13.x/pint)
 
 #### Laravel Rector
 
