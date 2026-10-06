@@ -109,7 +109,7 @@ const faqItems = [
     },
     {
         question: 'How do I customize the theme?',
-        answer: 'Edit the CSS variables in resources/css/app.css. The theme uses OKLch color space with semantic tokens for light and dark mode. All shadcn/ui components respect these tokens.',
+        answer: 'Edit the CSS variables in resources/css/app.css. The theme uses the Webminty mint palette with semantic tokens for light and dark mode. All shadcn/ui components respect these tokens.',
     },
 ];
 

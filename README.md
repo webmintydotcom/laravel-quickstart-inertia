@@ -28,6 +28,7 @@ laravel new my-app --pest --npm --using=webmintydotcom/laravel-quickstart-inerti
   - [Inertia.js](#inertiajs)
   - [Ziggy](#ziggy)
   - [Spatie Laravel Data](#spatie-laravel-data)
+  - [Laravel Person Name](#laravel-person-name)
 - [Frontend](#frontend)
   - [React](#react)
   - [Shadcn UI](#shadcn-ui)
@@ -60,7 +61,7 @@ Inertia.js connects the Laravel backend to the React frontend without needing an
 
 #### Ziggy
 
-Ziggy provides a `route()` helper in JavaScript, so you can use Laravel named routes in your React components.
+Ziggy provides a `route()` helper in JavaScript, so you can use Laravel named routes in your React components. Call the global `route()` or `import { route } from 'ziggy-js'`. Both work in the browser and under SSR, because `HandleInertiaRequests` shares the route list as a `ziggy` prop that `resources/js/ssr.tsx` hands to Ziggy before rendering.
 
 [Docs](https://github.com/tighten/ziggy)
 
@@ -69,6 +70,21 @@ Ziggy provides a `route()` helper in JavaScript, so you can use Laravel named ro
 Spatie Laravel Data is included to help you create data transfer objects (DTOs) in a simple and elegant way.
 
 [Docs](https://spatie.be/docs/laravel-data/v4/introduction)
+
+#### Laravel Person Name
+
+A Unicode-safe validation rule for first and last names, from any language or culture.
+
+```php
+use Webminty\PersonName\Rules\ValidPersonName;
+
+$request->validate([
+    'first_name' => ['required', new ValidPersonName],
+    'last_name'  => ['required', new ValidPersonName],
+]);
+```
+
+[Docs](https://github.com/webmintydotcom/laravel-person-name)
 
 ### Frontend
 
@@ -86,7 +102,9 @@ Pre-configured with `components.json` pointing to `resources/js/components/ui/`.
 
 #### Tailwind CSS
 
-Tailwind CSS v4 with the Vite plugin. Configured with Shadcn's full oklch color palette and dark mode support.
+Tailwind CSS v4 with the Vite plugin. Themed with the Webminty brand: a mint color scale, warm stone neutrals, and Plus Jakarta Sans / JetBrains Mono typefaces loaded from Google Fonts.
+
+Colors are semantic tokens (`--background`, `--primary`, `--card`, ...) defined as CSS variables in `resources/css/app.css`, with a `.dark` block for dark mode. Add the `dark` class to `<html>` to switch themes.
 
 [Homepage](https://tailwindcss.com/) | [Docs](https://tailwindcss.com/docs/installation)
 

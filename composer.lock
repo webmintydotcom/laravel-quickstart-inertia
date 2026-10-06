@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bd7e792a51950b9ffbba3392425d13ff",
+    "content-hash": "2754970a6e12eb1e418dcb6672fd8c12",
     "packages": [
         {
             "name": "brick/math",
@@ -7315,6 +7315,62 @@
                 }
             ],
             "time": "2026-04-26T05:33:54+00:00"
+        },
+        {
+            "name": "webmintydotcom/laravel-person-name",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webmintydotcom/laravel-person-name.git",
+                "reference": "6c78e19dba0974c0340f05ce4208b6322f9c570d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmintydotcom/laravel-person-name/zipball/6c78e19dba0974c0340f05ce4208b6322f9c570d",
+                "reference": "6c78e19dba0974c0340f05ce4208b6322f9c570d",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^11.0|^12.0|^13.0",
+                "illuminate/validation": "^11.0|^12.0|^13.0",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^9.0|^10.0",
+                "pestphp/pest": "^3.0",
+                "pestphp/pest-plugin-laravel": "^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Webminty\\PersonName\\PersonNameServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Webminty\\PersonName\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel validation rule to validate a person's first and last name.",
+            "keywords": [
+                "Person",
+                "first-name",
+                "laravel",
+                "last-name",
+                "name",
+                "validation"
+            ],
+            "support": {
+                "issues": "https://github.com/webmintydotcom/laravel-person-name/issues",
+                "source": "https://github.com/webmintydotcom/laravel-person-name/tree/1.0.0"
+            },
+            "time": "2026-04-09T22:57:11+00:00"
         },
         {
             "name": "webmozart/assert",
