@@ -22,24 +22,12 @@ import {
     Zap,
 } from 'lucide-react';
 
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from '@/components/ui/accordion';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
 import {
     Dialog,
@@ -52,44 +40,26 @@ import {
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Progress } from '@/components/ui/progress';
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from '@/components/ui/select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Separator } from '@/components/ui/separator';
 import { Slider } from '@/components/ui/slider';
 import { Switch } from '@/components/ui/switch';
-import {
-    Tabs,
-    TabsContent,
-    TabsList,
-    TabsTrigger,
-} from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Textarea } from '@/components/ui/textarea';
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from '@/components/ui/tooltip';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 const techStack = [
     {
         icon: Layers,
         title: 'Laravel 12',
-        description:
-            'The PHP framework for artisans. Elegant syntax, powerful ORM, and seamless API integration.',
+        description: 'The PHP framework for artisans. Elegant syntax, powerful ORM, and seamless API integration.',
         href: 'https://laravel.com/docs',
         color: 'text-red-500',
     },
     {
         icon: Zap,
         title: 'Inertia.js',
-        description:
-            'Build SPAs without an API. Connects your Laravel backend directly to your React frontend.',
+        description: 'Build SPAs without an API. Connects your Laravel backend directly to your React frontend.',
         href: 'https://inertiajs.com',
         color: 'text-purple-500',
     },
@@ -104,24 +74,21 @@ const techStack = [
     {
         icon: Paintbrush,
         title: 'Tailwind CSS v4',
-        description:
-            'Utility-first CSS with a brand new engine. Faster builds, modern CSS features, and zero config.',
+        description: 'Utility-first CSS with a brand new engine. Faster builds, modern CSS features, and zero config.',
         href: 'https://tailwindcss.com',
         color: 'text-cyan-500',
     },
     {
         icon: Layout,
         title: 'Shadcn UI',
-        description:
-            'Beautifully designed, accessible components you own. Built on Radix primitives and Tailwind.',
+        description: 'Beautifully designed, accessible components you own. Built on Radix primitives and Tailwind.',
         href: 'https://ui.shadcn.com',
         color: 'text-emerald-500',
     },
     {
         icon: Type,
         title: 'TypeScript',
-        description:
-            'Type-safe development with full IDE support. Catch bugs before they reach production.',
+        description: 'Type-safe development with full IDE support. Catch bugs before they reach production.',
         href: 'https://www.typescriptlang.org',
         color: 'text-blue-600',
     },
@@ -174,26 +141,22 @@ export default function Welcome() {
     return (
         <TooltipProvider>
             <Head title="Welcome" />
-            <div className="min-h-screen bg-background">
+            <div className="bg-background min-h-screen">
                 {/* ── Navigation ── */}
-                <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur-lg">
+                <header className="bg-background/80 sticky top-0 z-50 border-b backdrop-blur-lg">
                     <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
                         <div className="flex items-center gap-3">
-                            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-foreground text-background">
+                            <div className="bg-foreground text-background flex h-9 w-9 items-center justify-center rounded-lg">
                                 <Terminal className="h-4 w-4" />
                             </div>
-                            <span className="text-lg font-semibold tracking-tight text-foreground">
+                            <span className="text-foreground text-lg font-semibold tracking-tight">
                                 Laravel Quickstart
                             </span>
                         </div>
                         <div className="flex items-center gap-2">
                             <Tooltip>
                                 <TooltipTrigger asChild>
-                                    <Button
-                                        variant="ghost"
-                                        size="icon"
-                                        asChild
-                                    >
+                                    <Button variant="ghost" size="icon" asChild>
                                         <a
                                             href="https://github.com/webminty/laravel-quickstart-inertia"
                                             target="_blank"
@@ -204,9 +167,7 @@ export default function Welcome() {
                                         </a>
                                     </Button>
                                 </TooltipTrigger>
-                                <TooltipContent>
-                                    View on GitHub
-                                </TooltipContent>
+                                <TooltipContent>View on GitHub</TooltipContent>
                             </Tooltip>
                             <Tooltip>
                                 <TooltipTrigger asChild>
@@ -216,17 +177,11 @@ export default function Welcome() {
                                         onClick={toggleDarkMode}
                                         aria-label="Toggle dark mode"
                                     >
-                                        {darkMode ? (
-                                            <Sun className="h-4 w-4" />
-                                        ) : (
-                                            <Moon className="h-4 w-4" />
-                                        )}
+                                        {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
                                     </Button>
                                 </TooltipTrigger>
                                 <TooltipContent>
-                                    {darkMode
-                                        ? 'Switch to light mode'
-                                        : 'Switch to dark mode'}
+                                    {darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
                                 </TooltipContent>
                             </Tooltip>
                         </div>
@@ -236,28 +191,23 @@ export default function Welcome() {
                 {/* ── Hero Section ── */}
                 <section className="relative overflow-hidden">
                     <div className="absolute inset-0 -z-10">
-                        <div className="absolute left-1/2 top-0 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-cyan-500/10 blur-3xl" />
+                        <div className="absolute top-0 left-1/2 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-cyan-500/10 blur-3xl" />
                     </div>
-                    <div className="mx-auto max-w-6xl px-6 pb-16 pt-20 text-center sm:pt-28">
+                    <div className="mx-auto max-w-6xl px-6 pt-20 pb-16 text-center sm:pt-28">
                         <div className="mx-auto max-w-3xl">
-                            <Badge
-                                variant="secondary"
-                                className="mb-6 gap-1.5 px-3 py-1"
-                            >
+                            <Badge variant="secondary" className="mb-6 gap-1.5 px-3 py-1">
                                 <Sparkles className="h-3.5 w-3.5" />
                                 React + Inertia.js + Shadcn UI + Tailwind v4
                             </Badge>
-                            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+                            <h1 className="text-foreground text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
                                 Build modern apps{' '}
                                 <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent dark:from-purple-400 dark:via-blue-400 dark:to-cyan-400">
                                     beautifully fast
                                 </span>
                             </h1>
-                            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-                                A quickstart template with everything
-                                pre-configured. Laravel backend, React
-                                frontend, beautiful UI components, and a
-                                world-class developer experience.
+                            <p className="text-muted-foreground mx-auto mt-6 max-w-2xl text-lg leading-relaxed">
+                                A quickstart template with everything pre-configured. Laravel backend, React frontend,
+                                beautiful UI components, and a world-class developer experience.
                             </p>
                             <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
                                 <Button size="lg" asChild>
@@ -284,12 +234,11 @@ export default function Welcome() {
                 {/* ── Tech Stack Cards ── */}
                 <section className="mx-auto max-w-6xl px-6 pb-20">
                     <div className="mb-10 text-center">
-                        <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                        <h2 className="text-foreground text-2xl font-bold tracking-tight sm:text-3xl">
                             Everything you need
                         </h2>
-                        <p className="mt-2 text-muted-foreground">
-                            A curated set of best-in-class technologies, ready
-                            to go.
+                        <p className="text-muted-foreground mt-2">
+                            A curated set of best-in-class technologies, ready to go.
                         </p>
                     </div>
                     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -301,17 +250,15 @@ export default function Welcome() {
                                 rel="noopener noreferrer"
                                 className="group"
                             >
-                                <Card className="h-full transition-colors hover:bg-accent/50">
+                                <Card className="hover:bg-accent/50 h-full transition-colors">
                                     <CardHeader className="pb-3">
                                         <div className="flex items-center gap-3">
-                                            <div className="flex h-10 w-10 items-center justify-center rounded-lg border bg-background">
-                                                <item.icon
-                                                    className={`h-5 w-5 ${item.color}`}
-                                                />
+                                            <div className="bg-background flex h-10 w-10 items-center justify-center rounded-lg border">
+                                                <item.icon className={`h-5 w-5 ${item.color}`} />
                                             </div>
                                             <CardTitle className="flex items-center gap-2 text-base">
                                                 {item.title}
-                                                <ExternalLink className="h-3 w-3 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100" />
+                                                <ExternalLink className="text-muted-foreground h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" />
                                             </CardTitle>
                                         </div>
                                     </CardHeader>
@@ -335,26 +282,19 @@ export default function Welcome() {
                             <Code2 className="mr-1.5 h-3 w-3" />
                             Component Showcase
                         </Badge>
-                        <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                        <h2 className="text-foreground text-2xl font-bold tracking-tight sm:text-3xl">
                             Beautiful, accessible components
                         </h2>
-                        <p className="mt-2 text-muted-foreground">
-                            Explore the shadcn/ui components included in this
-                            template.
+                        <p className="text-muted-foreground mt-2">
+                            Explore the shadcn/ui components included in this template.
                         </p>
                     </div>
 
                     <Tabs defaultValue="inputs" className="w-full">
                         <TabsList className="mx-auto mb-8 grid w-full max-w-lg grid-cols-3">
-                            <TabsTrigger value="inputs">
-                                Inputs
-                            </TabsTrigger>
-                            <TabsTrigger value="display">
-                                Display
-                            </TabsTrigger>
-                            <TabsTrigger value="feedback">
-                                Feedback
-                            </TabsTrigger>
+                            <TabsTrigger value="inputs">Inputs</TabsTrigger>
+                            <TabsTrigger value="display">Display</TabsTrigger>
+                            <TabsTrigger value="feedback">Feedback</TabsTrigger>
                         </TabsList>
 
                         {/* ── Inputs Tab ── */}
@@ -363,50 +303,27 @@ export default function Welcome() {
                                 {/* Buttons & Variants */}
                                 <Card>
                                     <CardHeader>
-                                        <CardTitle className="text-base">
-                                            Buttons
-                                        </CardTitle>
-                                        <CardDescription>
-                                            Multiple variants, sizes, and
-                                            states.
-                                        </CardDescription>
+                                        <CardTitle className="text-base">Buttons</CardTitle>
+                                        <CardDescription>Multiple variants, sizes, and states.</CardDescription>
                                     </CardHeader>
                                     <CardContent className="space-y-4">
                                         <div className="flex flex-wrap gap-2">
-                                            <Button>
-                                                Primary
-                                            </Button>
-                                            <Button variant="secondary">
-                                                Secondary
-                                            </Button>
-                                            <Button variant="outline">
-                                                Outline
-                                            </Button>
-                                            <Button variant="ghost">
-                                                Ghost
-                                            </Button>
-                                            <Button variant="destructive">
-                                                Destructive
-                                            </Button>
+                                            <Button>Primary</Button>
+                                            <Button variant="secondary">Secondary</Button>
+                                            <Button variant="outline">Outline</Button>
+                                            <Button variant="ghost">Ghost</Button>
+                                            <Button variant="destructive">Destructive</Button>
                                         </div>
                                         <div className="flex flex-wrap items-center gap-2">
-                                            <Button size="sm">
-                                                Small
-                                            </Button>
-                                            <Button size="default">
-                                                Default
-                                            </Button>
-                                            <Button size="lg">
-                                                Large
-                                            </Button>
+                                            <Button size="sm">Small</Button>
+                                            <Button size="default">Default</Button>
+                                            <Button size="lg">Large</Button>
                                             <Button size="icon" aria-label="Settings">
                                                 <Settings className="h-4 w-4" />
                                             </Button>
                                         </div>
                                         <div className="flex flex-wrap gap-2">
-                                            <Button disabled>
-                                                Disabled
-                                            </Button>
+                                            <Button disabled>Disabled</Button>
                                             <Button>
                                                 <Rocket className="mr-2 h-4 w-4" />
                                                 With Icon
@@ -418,32 +335,20 @@ export default function Welcome() {
                                 {/* Form Controls */}
                                 <Card>
                                     <CardHeader>
-                                        <CardTitle className="text-base">
-                                            Form Controls
-                                        </CardTitle>
-                                        <CardDescription>
-                                            Inputs, selects, checkboxes, and
-                                            more.
-                                        </CardDescription>
+                                        <CardTitle className="text-base">Form Controls</CardTitle>
+                                        <CardDescription>Inputs, selects, checkboxes, and more.</CardDescription>
                                     </CardHeader>
                                     <CardContent className="space-y-4">
                                         <div className="space-y-2">
-                                            <label
-                                                htmlFor="demo-email"
-                                                className="text-sm font-medium text-foreground"
-                                            >
+                                            <label htmlFor="demo-email" className="text-foreground text-sm font-medium">
                                                 Email
                                             </label>
-                                            <Input
-                                                id="demo-email"
-                                                type="email"
-                                                placeholder="you@example.com"
-                                            />
+                                            <Input id="demo-email" type="email" placeholder="you@example.com" />
                                         </div>
                                         <div className="space-y-2">
                                             <label
                                                 htmlFor="demo-select"
-                                                className="text-sm font-medium text-foreground"
+                                                className="text-foreground text-sm font-medium"
                                             >
                                                 Framework
                                             </label>
@@ -452,33 +357,21 @@ export default function Welcome() {
                                                     <SelectValue placeholder="Select a framework" />
                                                 </SelectTrigger>
                                                 <SelectContent>
-                                                    <SelectItem value="laravel">
-                                                        Laravel
-                                                    </SelectItem>
-                                                    <SelectItem value="rails">
-                                                        Ruby on Rails
-                                                    </SelectItem>
-                                                    <SelectItem value="django">
-                                                        Django
-                                                    </SelectItem>
-                                                    <SelectItem value="nextjs">
-                                                        Next.js
-                                                    </SelectItem>
+                                                    <SelectItem value="laravel">Laravel</SelectItem>
+                                                    <SelectItem value="rails">Ruby on Rails</SelectItem>
+                                                    <SelectItem value="django">Django</SelectItem>
+                                                    <SelectItem value="nextjs">Next.js</SelectItem>
                                                 </SelectContent>
                                             </Select>
                                         </div>
                                         <div className="space-y-2">
                                             <label
                                                 htmlFor="demo-message"
-                                                className="text-sm font-medium text-foreground"
+                                                className="text-foreground text-sm font-medium"
                                             >
                                                 Message
                                             </label>
-                                            <Textarea
-                                                id="demo-message"
-                                                placeholder="Type your message..."
-                                                rows={3}
-                                            />
+                                            <Textarea id="demo-message" placeholder="Type your message..." rows={3} />
                                         </div>
                                     </CardContent>
                                 </Card>
@@ -486,34 +379,26 @@ export default function Welcome() {
                                 {/* Toggles & Sliders */}
                                 <Card>
                                     <CardHeader>
-                                        <CardTitle className="text-base">
-                                            Toggles & Sliders
-                                        </CardTitle>
-                                        <CardDescription>
-                                            Interactive controls with live
-                                            state.
-                                        </CardDescription>
+                                        <CardTitle className="text-base">Toggles & Sliders</CardTitle>
+                                        <CardDescription>Interactive controls with live state.</CardDescription>
                                     </CardHeader>
                                     <CardContent className="space-y-6">
                                         <div className="flex items-center justify-between">
                                             <div className="space-y-0.5">
                                                 <label
                                                     htmlFor="notifications-switch"
-                                                    className="text-sm font-medium text-foreground"
+                                                    className="text-foreground text-sm font-medium"
                                                 >
                                                     Enable notifications
                                                 </label>
-                                                <p className="text-xs text-muted-foreground">
-                                                    Receive email updates about
-                                                    your account.
+                                                <p className="text-muted-foreground text-xs">
+                                                    Receive email updates about your account.
                                                 </p>
                                             </div>
                                             <Switch
                                                 id="notifications-switch"
                                                 checked={switchChecked}
-                                                onCheckedChange={
-                                                    setSwitchChecked
-                                                }
+                                                onCheckedChange={setSwitchChecked}
                                             />
                                         </div>
                                         <Separator />
@@ -521,11 +406,11 @@ export default function Welcome() {
                                             <div className="flex items-center justify-between">
                                                 <label
                                                     htmlFor="volume-slider"
-                                                    className="text-sm font-medium text-foreground"
+                                                    className="text-foreground text-sm font-medium"
                                                 >
                                                     Volume
                                                 </label>
-                                                <span className="text-sm tabular-nums text-muted-foreground">
+                                                <span className="text-muted-foreground text-sm tabular-nums">
                                                     {sliderValue[0]}%
                                                 </span>
                                             </div>
@@ -539,33 +424,23 @@ export default function Welcome() {
                                         </div>
                                         <Separator />
                                         <div className="space-y-3">
-                                            <span className="text-sm font-medium text-foreground">
-                                                Preferences
-                                            </span>
+                                            <span className="text-foreground text-sm font-medium">Preferences</span>
                                             <div className="flex flex-col gap-3">
                                                 <label className="flex items-center gap-2">
-                                                    <Checkbox
-                                                        defaultChecked
-                                                        id="pref-1"
-                                                    />
-                                                    <span className="text-sm text-foreground">
+                                                    <Checkbox defaultChecked id="pref-1" />
+                                                    <span className="text-foreground text-sm">
                                                         Receive marketing emails
                                                     </span>
                                                 </label>
                                                 <label className="flex items-center gap-2">
                                                     <Checkbox id="pref-2" />
-                                                    <span className="text-sm text-foreground">
+                                                    <span className="text-foreground text-sm">
                                                         Enable two-factor auth
                                                     </span>
                                                 </label>
                                                 <label className="flex items-center gap-2">
-                                                    <Checkbox
-                                                        defaultChecked
-                                                        id="pref-3"
-                                                    />
-                                                    <span className="text-sm text-foreground">
-                                                        Show online status
-                                                    </span>
+                                                    <Checkbox defaultChecked id="pref-3" />
+                                                    <span className="text-foreground text-sm">Show online status</span>
                                                 </label>
                                             </div>
                                         </div>
@@ -575,13 +450,8 @@ export default function Welcome() {
                                 {/* Dialog */}
                                 <Card>
                                     <CardHeader>
-                                        <CardTitle className="text-base">
-                                            Dialog
-                                        </CardTitle>
-                                        <CardDescription>
-                                            Modal dialogs for confirmations and
-                                            forms.
-                                        </CardDescription>
+                                        <CardTitle className="text-base">Dialog</CardTitle>
+                                        <CardDescription>Modal dialogs for confirmations and forms.</CardDescription>
                                     </CardHeader>
                                     <CardContent className="space-y-4">
                                         <Dialog>
@@ -593,33 +463,20 @@ export default function Welcome() {
                                             </DialogTrigger>
                                             <DialogContent className="sm:max-w-md">
                                                 <DialogHeader>
-                                                    <DialogTitle>
-                                                        Get in touch
-                                                    </DialogTitle>
+                                                    <DialogTitle>Get in touch</DialogTitle>
                                                     <DialogDescription>
-                                                        Send us a message and
-                                                        we&apos;ll get back to
-                                                        you soon.
+                                                        Send us a message and we&apos;ll get back to you soon.
                                                     </DialogDescription>
                                                 </DialogHeader>
                                                 <div className="space-y-4 py-4">
                                                     <div className="space-y-2">
-                                                        <label
-                                                            htmlFor="dialog-name"
-                                                            className="text-sm font-medium"
-                                                        >
+                                                        <label htmlFor="dialog-name" className="text-sm font-medium">
                                                             Name
                                                         </label>
-                                                        <Input
-                                                            id="dialog-name"
-                                                            placeholder="Your name"
-                                                        />
+                                                        <Input id="dialog-name" placeholder="Your name" />
                                                     </div>
                                                     <div className="space-y-2">
-                                                        <label
-                                                            htmlFor="dialog-email"
-                                                            className="text-sm font-medium"
-                                                        >
+                                                        <label htmlFor="dialog-email" className="text-sm font-medium">
                                                             Email
                                                         </label>
                                                         <Input
@@ -629,10 +486,7 @@ export default function Welcome() {
                                                         />
                                                     </div>
                                                     <div className="space-y-2">
-                                                        <label
-                                                            htmlFor="dialog-message"
-                                                            className="text-sm font-medium"
-                                                        >
+                                                        <label htmlFor="dialog-message" className="text-sm font-medium">
                                                             Message
                                                         </label>
                                                         <Textarea
@@ -650,10 +504,8 @@ export default function Welcome() {
                                                 </DialogFooter>
                                             </DialogContent>
                                         </Dialog>
-                                        <p className="text-sm text-muted-foreground">
-                                            Click the button above to open an
-                                            interactive dialog with form
-                                            controls.
+                                        <p className="text-muted-foreground text-sm">
+                                            Click the button above to open an interactive dialog with form controls.
                                         </p>
                                     </CardContent>
                                 </Card>
@@ -666,29 +518,16 @@ export default function Welcome() {
                                 {/* Badges */}
                                 <Card>
                                     <CardHeader>
-                                        <CardTitle className="text-base">
-                                            Badges
-                                        </CardTitle>
-                                        <CardDescription>
-                                            Status indicators and labels.
-                                        </CardDescription>
+                                        <CardTitle className="text-base">Badges</CardTitle>
+                                        <CardDescription>Status indicators and labels.</CardDescription>
                                     </CardHeader>
                                     <CardContent>
                                         <div className="flex flex-wrap gap-2">
                                             <Badge>Default</Badge>
-                                            <Badge variant="secondary">
-                                                Secondary
-                                            </Badge>
-                                            <Badge variant="outline">
-                                                Outline
-                                            </Badge>
-                                            <Badge variant="destructive">
-                                                Destructive
-                                            </Badge>
-                                            <Badge
-                                                variant="secondary"
-                                                className="gap-1"
-                                            >
+                                            <Badge variant="secondary">Secondary</Badge>
+                                            <Badge variant="outline">Outline</Badge>
+                                            <Badge variant="destructive">Destructive</Badge>
+                                            <Badge variant="secondary" className="gap-1">
                                                 <Check className="h-3 w-3" />
                                                 Success
                                             </Badge>
@@ -703,12 +542,8 @@ export default function Welcome() {
                                 {/* Avatars */}
                                 <Card>
                                     <CardHeader>
-                                        <CardTitle className="text-base">
-                                            Avatars
-                                        </CardTitle>
-                                        <CardDescription>
-                                            User profile images with fallbacks.
-                                        </CardDescription>
+                                        <CardTitle className="text-base">Avatars</CardTitle>
+                                        <CardDescription>User profile images with fallbacks.</CardDescription>
                                     </CardHeader>
                                     <CardContent>
                                         <div className="flex items-center gap-4">
@@ -717,27 +552,21 @@ export default function Welcome() {
                                                     src="https://api.dicebear.com/9.x/initials/svg?seed=JD&backgroundType=gradientLinear"
                                                     alt="John Doe"
                                                 />
-                                                <AvatarFallback>
-                                                    JD
-                                                </AvatarFallback>
+                                                <AvatarFallback>JD</AvatarFallback>
                                             </Avatar>
                                             <Avatar className="h-12 w-12">
                                                 <AvatarImage
                                                     src="https://api.dicebear.com/9.x/initials/svg?seed=AS&backgroundType=gradientLinear"
                                                     alt="Alice Smith"
                                                 />
-                                                <AvatarFallback>
-                                                    AS
-                                                </AvatarFallback>
+                                                <AvatarFallback>AS</AvatarFallback>
                                             </Avatar>
                                             <Avatar className="h-12 w-12">
                                                 <AvatarImage
                                                     src="https://api.dicebear.com/9.x/initials/svg?seed=MJ&backgroundType=gradientLinear"
                                                     alt="Michael Johnson"
                                                 />
-                                                <AvatarFallback>
-                                                    MJ
-                                                </AvatarFallback>
+                                                <AvatarFallback>MJ</AvatarFallback>
                                             </Avatar>
                                             <Avatar className="h-12 w-12">
                                                 <AvatarFallback>
@@ -751,12 +580,8 @@ export default function Welcome() {
                                 {/* Cards with Content */}
                                 <Card>
                                     <CardHeader>
-                                        <CardTitle className="text-base">
-                                            Card Layouts
-                                        </CardTitle>
-                                        <CardDescription>
-                                            Flexible containers for any content.
-                                        </CardDescription>
+                                        <CardTitle className="text-base">Card Layouts</CardTitle>
+                                        <CardDescription>Flexible containers for any content.</CardDescription>
                                     </CardHeader>
                                     <CardContent>
                                         <div className="space-y-3">
@@ -785,18 +610,12 @@ export default function Welcome() {
                                                     className="flex items-center justify-between rounded-lg border p-3"
                                                 >
                                                     <div>
-                                                        <p className="text-sm font-medium text-foreground">
+                                                        <p className="text-foreground text-sm font-medium">
                                                             {task.name}
                                                         </p>
-                                                        <p className="text-xs text-muted-foreground">
-                                                            {task.desc}
-                                                        </p>
+                                                        <p className="text-muted-foreground text-xs">{task.desc}</p>
                                                     </div>
-                                                    <Badge
-                                                        variant={task.variant}
-                                                    >
-                                                        {task.badge}
-                                                    </Badge>
+                                                    <Badge variant={task.variant}>{task.badge}</Badge>
                                                 </div>
                                             ))}
                                         </div>
@@ -806,12 +625,8 @@ export default function Welcome() {
                                 {/* Team Card */}
                                 <Card>
                                     <CardHeader>
-                                        <CardTitle className="text-base">
-                                            Team Members
-                                        </CardTitle>
-                                        <CardDescription>
-                                            Combine avatars, text, and badges.
-                                        </CardDescription>
+                                        <CardTitle className="text-base">Team Members</CardTitle>
+                                        <CardDescription>Combine avatars, text, and badges.</CardDescription>
                                     </CardHeader>
                                     <CardContent>
                                         <div className="space-y-4">
@@ -832,30 +647,21 @@ export default function Welcome() {
                                                     initials: 'PP',
                                                 },
                                             ].map((member) => (
-                                                <div
-                                                    key={member.name}
-                                                    className="flex items-center gap-3"
-                                                >
+                                                <div key={member.name} className="flex items-center gap-3">
                                                     <Avatar>
                                                         <AvatarImage
                                                             src={`https://api.dicebear.com/9.x/initials/svg?seed=${member.initials}&backgroundType=gradientLinear`}
                                                             alt={member.name}
                                                         />
-                                                        <AvatarFallback>
-                                                            {member.initials}
-                                                        </AvatarFallback>
+                                                        <AvatarFallback>{member.initials}</AvatarFallback>
                                                     </Avatar>
                                                     <div className="flex-1">
-                                                        <p className="text-sm font-medium text-foreground">
+                                                        <p className="text-foreground text-sm font-medium">
                                                             {member.name}
                                                         </p>
-                                                        <p className="text-xs text-muted-foreground">
-                                                            {member.role}
-                                                        </p>
+                                                        <p className="text-muted-foreground text-xs">{member.role}</p>
                                                     </div>
-                                                    <Badge variant="secondary">
-                                                        Active
-                                                    </Badge>
+                                                    <Badge variant="secondary">Active</Badge>
                                                 </div>
                                             ))}
                                         </div>
@@ -870,20 +676,14 @@ export default function Welcome() {
                                 {/* Progress */}
                                 <Card>
                                     <CardHeader>
-                                        <CardTitle className="text-base">
-                                            Progress
-                                        </CardTitle>
-                                        <CardDescription>
-                                            Track completion and loading states.
-                                        </CardDescription>
+                                        <CardTitle className="text-base">Progress</CardTitle>
+                                        <CardDescription>Track completion and loading states.</CardDescription>
                                     </CardHeader>
                                     <CardContent className="space-y-6">
                                         <div className="space-y-2">
                                             <div className="flex justify-between text-sm">
-                                                <span className="text-foreground">
-                                                    Project completion
-                                                </span>
-                                                <span className="tabular-nums text-muted-foreground">
+                                                <span className="text-foreground">Project completion</span>
+                                                <span className="text-muted-foreground tabular-nums">
                                                     {progressValue}%
                                                 </span>
                                             </div>
@@ -893,38 +693,18 @@ export default function Welcome() {
                                             <Button
                                                 size="sm"
                                                 variant="outline"
-                                                onClick={() =>
-                                                    setProgressValue(
-                                                        Math.max(
-                                                            0,
-                                                            progressValue - 10,
-                                                        ),
-                                                    )
-                                                }
+                                                onClick={() => setProgressValue(Math.max(0, progressValue - 10))}
                                             >
                                                 -10%
                                             </Button>
                                             <Button
                                                 size="sm"
                                                 variant="outline"
-                                                onClick={() =>
-                                                    setProgressValue(
-                                                        Math.min(
-                                                            100,
-                                                            progressValue + 10,
-                                                        ),
-                                                    )
-                                                }
+                                                onClick={() => setProgressValue(Math.min(100, progressValue + 10))}
                                             >
                                                 +10%
                                             </Button>
-                                            <Button
-                                                size="sm"
-                                                variant="outline"
-                                                onClick={() =>
-                                                    setProgressValue(100)
-                                                }
-                                            >
+                                            <Button size="sm" variant="outline" onClick={() => setProgressValue(100)}>
                                                 Complete
                                             </Button>
                                         </div>
@@ -934,31 +714,21 @@ export default function Welcome() {
                                 {/* Alerts */}
                                 <Card>
                                     <CardHeader>
-                                        <CardTitle className="text-base">
-                                            Alerts
-                                        </CardTitle>
-                                        <CardDescription>
-                                            Informational and status messages.
-                                        </CardDescription>
+                                        <CardTitle className="text-base">Alerts</CardTitle>
+                                        <CardDescription>Informational and status messages.</CardDescription>
                                     </CardHeader>
                                     <CardContent className="space-y-3">
                                         <Alert>
                                             <Rocket className="h-4 w-4" />
-                                            <AlertTitle>
-                                                Ready to launch!
-                                            </AlertTitle>
+                                            <AlertTitle>Ready to launch!</AlertTitle>
                                             <AlertDescription>
-                                                Your application is configured
-                                                and ready to deploy.
+                                                Your application is configured and ready to deploy.
                                             </AlertDescription>
                                         </Alert>
                                         <Alert variant="destructive">
-                                            <AlertTitle>
-                                                Breaking change
-                                            </AlertTitle>
+                                            <AlertTitle>Breaking change</AlertTitle>
                                             <AlertDescription>
-                                                Please update your API keys
-                                                before the next release.
+                                                Please update your API keys before the next release.
                                             </AlertDescription>
                                         </Alert>
                                     </CardContent>
@@ -967,12 +737,8 @@ export default function Welcome() {
                                 {/* Tooltips */}
                                 <Card className="lg:col-span-2">
                                     <CardHeader>
-                                        <CardTitle className="text-base">
-                                            Tooltips
-                                        </CardTitle>
-                                        <CardDescription>
-                                            Contextual information on hover.
-                                        </CardDescription>
+                                        <CardTitle className="text-base">Tooltips</CardTitle>
+                                        <CardDescription>Contextual information on hover.</CardDescription>
                                     </CardHeader>
                                     <CardContent>
                                         <div className="flex flex-wrap gap-2">
@@ -1000,13 +766,9 @@ export default function Welcome() {
                                             ].map((item) => (
                                                 <Tooltip key={item.label}>
                                                     <TooltipTrigger asChild>
-                                                        <Button variant="outline">
-                                                            {item.label}
-                                                        </Button>
+                                                        <Button variant="outline">{item.label}</Button>
                                                     </TooltipTrigger>
-                                                    <TooltipContent>
-                                                        {item.tip}
-                                                    </TooltipContent>
+                                                    <TooltipContent>{item.tip}</TooltipContent>
                                                 </Tooltip>
                                             ))}
                                         </div>
@@ -1026,31 +788,18 @@ export default function Welcome() {
                             <Badge variant="outline" className="mb-4">
                                 FAQ
                             </Badge>
-                            <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                            <h2 className="text-foreground text-2xl font-bold tracking-tight sm:text-3xl">
                                 Common questions
                             </h2>
-                            <p className="mt-2 text-muted-foreground">
-                                Quick answers to help you get started with this
-                                template.
+                            <p className="text-muted-foreground mt-2">
+                                Quick answers to help you get started with this template.
                             </p>
                         </div>
-                        <Accordion
-                            type="single"
-                            collapsible
-                            defaultValue="item-0"
-                            className="w-full"
-                        >
+                        <Accordion type="single" collapsible defaultValue="item-0" className="w-full">
                             {faqItems.map((item, index) => (
-                                <AccordionItem
-                                    key={index}
-                                    value={`item-${index}`}
-                                >
-                                    <AccordionTrigger>
-                                        {item.question}
-                                    </AccordionTrigger>
-                                    <AccordionContent>
-                                        {item.answer}
-                                    </AccordionContent>
+                                <AccordionItem key={index} value={`item-${index}`}>
+                                    <AccordionTrigger>{item.question}</AccordionTrigger>
+                                    <AccordionContent>{item.answer}</AccordionContent>
                                 </AccordionItem>
                             ))}
                         </Accordion>
@@ -1060,20 +809,13 @@ export default function Welcome() {
                 {/* ── Footer ── */}
                 <footer className="border-t">
                     <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 sm:flex-row">
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <div className="text-muted-foreground flex items-center gap-2 text-sm">
                             <Terminal className="h-4 w-4" />
-                            <span>
-                                Laravel v12 + React 19 + Inertia.js + Shadcn UI
-                                + Tailwind v4
-                            </span>
+                            <span>Laravel v12 + React 19 + Inertia.js + Shadcn UI + Tailwind v4</span>
                         </div>
                         <div className="flex gap-2">
                             <Button size="sm" variant="ghost" asChild>
-                                <a
-                                    href="https://laravel.com/docs"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
+                                <a href="https://laravel.com/docs" target="_blank" rel="noopener noreferrer">
                                     Docs
                                 </a>
                             </Button>
