@@ -146,7 +146,7 @@ Pest 5 is included to help you write expressive and elegant tests for your Larav
 
 ##### Pest Plugin - Browser
 
-Pest Plugin Browser runs tests in a real browser (Playwright) for behaviour that Feature tests cannot prove. Install the browser once with `npx playwright install chromium`, build the front end with `npm run build`, then run `vendor/bin/pest tests/Browser`. Browser tests live in `tests/Browser` and are not part of `php artisan test`.
+Pest Plugin Browser runs tests in a real browser (Playwright) for behaviour that Feature tests cannot prove. `playwright` is a dev dependency (`npm install`); download its browser once with `npx playwright install chromium`, build the front end with `npm run build`, then run `vendor/bin/pest tests/Browser`. Browser tests live in `tests/Browser` and are not part of `php artisan test`; failure screenshots go to `tests/Browser/Screenshots` (git-ignored).
 
 [Homepage](https://pestphp.com/docs/browser-testing)
 
