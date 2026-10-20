@@ -41,6 +41,7 @@ laravel new my-app --pest --npm --using=webmintydotcom/laravel-quickstart-inerti
     - [Pest Plugin - Faker](#pest-plugin---faker)
     - [Pest Plugin - Laravel](#pest-plugin---laravel)
     - [Pest Plugin - Type Coverage](#pest-plugin---type-coverage)
+    - [Pest Plugin - Browser](#pest-plugin---browser)
   - [Larastan](#larastan)
   - [Pint](#pint)
   - [Rector](#rector)
@@ -48,6 +49,9 @@ laravel new my-app --pest --npm --using=webmintydotcom/laravel-quickstart-inerti
   - [Prettier](#prettier)
     - [Prettier Plugin - Tailwind CSS](#prettier-plugin---tailwind-css)
     - [Prettier Plugin - Blade](#prettier-plugin---blade)
+- [AI Assistance](#ai-assistance)
+  - [Webminty Guidelines](#webminty-guidelines)
+  - [Claude Code Agents](#claude-code-agents)
 
 ### Laravel
 
@@ -140,6 +144,12 @@ Pest 5 is included to help you write expressive and elegant tests for your Larav
 
 [Docs](https://pestphp.com/docs/type-coverage)
 
+##### Pest Plugin - Browser
+
+Pest Plugin Browser runs tests in a real browser (Playwright) for behaviour that Feature tests cannot prove. Install the browser once with `npx playwright install chromium`, build the front end with `npm run build`, then run `vendor/bin/pest tests/Browser`. Browser tests live in `tests/Browser` and are not part of `php artisan test`.
+
+[Homepage](https://pestphp.com/docs/browser-testing)
+
 #### Larastan
 
 Larastan is included to help you catch type errors in your Laravel applications using PHPStan.
@@ -173,6 +183,29 @@ Prettier is included to help you format your code consistently across your proje
 ##### Prettier Plugin - Blade
 
 [Docs](https://github.com/stillat/blade-parser-typescript)
+
+### AI Assistance
+
+#### Webminty Guidelines
+
+[webminty/boost-webminty-guidelines](https://github.com/webmintydotcom/boost-webminty-guidelines) provides Webminty's Laravel, Tailwind, Inertia and Livewire coding standards as AI skills for Laravel Boost (v4: PHP 8.4+, Laravel 13+). Pint, Rector and PHPStan in this kit are configured to match them.
+
+#### Claude Code Agents
+
+Project agents live in `.claude/agents`. Ask Claude Code to use one by name, or let it pick the right one:
+
+| Agent | Purpose |
+|-------|---------|
+| `standards-reviewer` | Runs Pint, Rector and PHPStan, then checks the branch against the Webminty standards |
+| `security-reviewer` | Reviews the branch for authorization, mass assignment, data exposure and injection problems |
+| `test-gap-finder` | Lists new or changed behaviour that has no test coverage |
+| `pest-test-writer` | Writes non-browser Pest tests, skipping redundant and framework-level cases |
+| `pest-test-runner` | Runs the non-browser suite and sorts failures into test bug, code bug or environment |
+| `pest-browser-writer` | Writes Pest browser tests for journeys and JavaScript behaviour that Feature tests cannot prove |
+| `pest-browser-runner` | Runs the browser tests, checks Playwright and the build first, and reads failure screenshots |
+| `project-docs-keeper` | Updates `features.md`, `DECISIONS.md` and `CHANGELOG.md` for the branch |
+
+The reviewers and runners are read-only. The writers edit only `tests/`, and `project-docs-keeper` edits only `features.md`, `DECISIONS.md` and `CHANGELOG.md`. None of them commit.
 
 ## Additional Configurations
 
